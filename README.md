@@ -1,1 +1,1 @@
-# CSCE-331-Spring-2026-900-908-project1-833009526
+# A project where I work on developing my first personal website.
