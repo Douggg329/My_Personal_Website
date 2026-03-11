@@ -1,0 +1,66 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Grant Duong</title>
+        <link rel="stylesheet" type="text/css" href="style.css" id="theme-link">
+
+        <script>
+            const themeLink = document.getElementById('theme-link');
+            const savedTheme = localStorage.getItem('theme');
+            if (savedTheme) {
+                themeLink.setAttribute('href', savedTheme);
+            }
+        
+            function switchTheme() {
+                let currentSheet = themeLink.getAttribute('href');
+                let nextSheet = (currentSheet === 'style.css') ? 'style2.css' : 'style.css';
+                
+                themeLink.setAttribute('href', nextSheet);
+                localStorage.setItem('theme', nextSheet);
+            }
+        </script>
+    </head>
+<body>
+    <div class = "topnav">
+        <a href = "index.html">Home</a>
+        <a href="portfolio.html">Portfolio</a>
+        <a class="active" href="qualifications.html">Qualifications</a>
+        <a href="service.html">Service</a>
+        <a href="genai.html">AI Page</a>
+        <a href="https://www.linkedin.com/in/grant-duong-dfw">LinkedIn</a>
+        <a href="https://github.com/Douggg329?tab=repositories">GitHub</a>
+        <a button onclick="switchTheme()">Change Style</a>
+        <a href = "https://www.tamu.edu/" class="clickable-image-link">
+            <img class = "Tamu" src = "Images/TAM-Stacked-Maroon.jpg">
+        </a>
+    </div>
+    <div class = "body">
+        <img class = "corkboard" src="Images/Cork-board.png">
+        <iframe class = "resume" src = "https://docs.google.com/document/d/e/2PACX-1vT9iaL5VwdGnsi982fOX_k-wHVfdlRPYklB5kQpJvVBfB3jyH4O9EYpYBOUT2F-Z8r3-wzDzzs41W5S/pub?embedded=true" height="450" width="550"></iframe>
+        <div class="sticky note1">
+            <a href = "https://www.w3schools.com/cpp/cpp_intro.asp" class="clickable-image-link">
+                <h3>C++</h3>
+            </a>
+            <p>Within the world of C++ I have done a multitude of work. I have taken many classes based in C++ such as CSCE 120, CSCE 221, and CSCE 313. All these classes are C++ based and have taught me everything from algorithms to optimization to cryptography.</p>
+        </div>
+        <div class="sticky note2">
+            <a href = "https://www.linux.org/" class="clickable-image-link">
+                <h3>Linux</h3>
+            </a>
+            <p>In the world of Linux I am currently working on my RHCSA certification. This certification is proof of my knowledge of linux especially for the cybersecurity world. I also have utilized Linux as a main terminal for anything cybersecurity related, primarily Ubuntu.</p>
+        </div>
+        <div class="sticky note3">
+            <a href = "https://www.togetherplatform.com/blog/peer-teaching-overview-benefits-models" class="clickable-image-link">
+                <h3>Peer Teaching</h3>
+            </a>
+            <p>As a Peer Teacher I've aided 100+ students in their education within the electrical engineering world, giving them experience with breadboards and programming systems within Verilog. Within the lab I also have created a single cycle processor. </p>
+        </div>
+        <div class="sticky note4"> 
+            
+            <a href = "https://www.cisco.com/site/us/en/learn/topics/security/what-is-cybersecurity.html" class="clickable-image-link">
+                <h3>Cybersecurity</h3>
+            </a>
+            <p>I'm really interested in the world of cybersecurity due to the fact that everything needs to be secure in this online world. From the transactions we make to the companies we trust with our sensitive information we need to have peace of mind knowing it's protected.</p>
+        </div>
+    </div>
+</html>

@@ -1,0 +1,55 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Grant Duong</title>
+        <link rel="stylesheet" type="text/css" href="style.css" id="theme-link">
+
+        <script>
+            const themeLink = document.getElementById('theme-link');
+            const savedTheme = localStorage.getItem('theme');
+            if (savedTheme) {
+                themeLink.setAttribute('href', savedTheme);
+            }
+        
+            function switchTheme() {
+                let currentSheet = themeLink.getAttribute('href');
+                let nextSheet = (currentSheet === 'style.css') ? 'style2.css' : 'style.css';
+                
+                themeLink.setAttribute('href', nextSheet);
+                localStorage.setItem('theme', nextSheet);
+            }
+        </script>
+    </head>
+<body>
+    <div class = "topnav">
+        <a class="active" href = "index.html">Home</a>
+        <a href="portfolio.html">Portfolio</a>
+        <a href="qualifications.html">Qualifications</a>
+        <a href="service.html">Service</a>
+        <a href="genai.html">AI Page</a>
+        <a href="https://www.linkedin.com/in/grant-duong-dfw">LinkedIn</a>
+        <a href="https://github.com/Douggg329?tab=repositories">GitHub</a>
+        <a button onclick="switchTheme()">Change Style</a>
+        <a href = "https://www.tamu.edu/" class="clickable-image-link">
+            <img class = "Tamu" src = "Images/TAM-Stacked-Maroon.jpg">
+        </a>
+    </div>
+    
+    <div class = "Top">
+        <img src="Images/headshot.JPG" class = "moved-headshot" height = "400" width = "280">
+
+        <h1 >Who I Am</h1>
+        <p class = "textbox text moved-text">Howdy, I am Grant Duong, a junior at Texas A&M University, currently pursuing a computer engineering degree with a minor in cybersecurity. I love to travel, cook, and climb. I currently live in Dallas Texas, and am on the search for an internship opportunity at the moment. I have an immense dedication to what I do and once I get on a task I don't stop until I've completed it. </p>
+
+    </div>
+    <div class = "bottom">
+        <h2>Contact Infortmation</h2>
+        <p class="text moved-contact">Phone: 720-829-7235</p>
+        <p class="text moved-contact"><a href = "grantd729@gmail.com" target="_blank">Email: Grantd729@gmail.com</a></p>
+    </div>
+
+
+</body>
+</html>

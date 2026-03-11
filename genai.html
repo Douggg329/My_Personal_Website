@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Knowledge Tree - Final Evolution</title>
+    <style>
+        :root {
+            --sky-blue: #f0f9ff;
+            --tree-green: #1b4332;
+            --sidebar-bg: #ffffff;
+            --accent-green: #40916c;
+            --bark-brown: #3e2723;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, sans-serif;
+            background-color: var(--sky-blue);
+            margin: 0;
+            padding: 0;
+            overflow-y: auto; 
+        }
+
+        header {
+            background: #1a1a1a;
+            padding: 15px 0;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        nav {
+            display: flex;
+            justify-content: center;
+            gap: 12px;
+            flex-wrap: wrap;
+        }
+
+        .nav-link {
+            width: 110px;
+            padding: 8px;
+            background: #333;
+            color: #fff;
+            text-decoration: none;
+            text-align: center;
+            border-radius: 4px;
+            font-size: 14px;
+            transition: 0.3s;
+        }
+        .nav-link:hover { background: var(--accent-green); }
+
+        .main-container {
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            padding: 40px 20px;
+            gap: 20px;
+            min-height: 1400px;
+        }
+
+        .side-column {
+            flex: 0 0 320px;
+            background: var(--sidebar-bg);
+            border-radius: 12px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.05);
+            padding: 25px;
+            border-top: 8px solid var(--tree-green);
+        }
+
+        /* --- The Illustration Area --- */
+        .art-center {
+            flex: 1;
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            min-width: 500px;
+        }
+
+        .prompt-history-box {
+            position: absolute;
+            top: 80px;
+            width: 320px;
+            height: 250px;
+            background: rgba(255, 255, 255, 0.9);
+            border: 2px solid var(--tree-green);
+            border-radius: 10px;
+            padding: 15px;
+            font-size: 0.8rem;
+            overflow-y: auto;
+            z-index: 50;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+        }
+
+        .prompt-history-box h4 {
+            margin: 0 0 10px 0;
+            color: var(--tree-green);
+            text-align: center;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            border-bottom: 2px solid var(--accent-green);
+        }
+
+        .prompt-item {
+            margin-bottom: 15px;
+            padding-bottom: 10px;
+            border-bottom: 1px solid #eee;
+        }
+
+        .prompt-label {
+            font-weight: bold;
+            color: var(--accent-green);
+            display: block;
+        }
+
+        svg {
+            width: 100%;
+            max-width: 600px;
+            height: auto;
+        }
+
+        /* Leaf Animation */
+        .leaf {
+            position: fixed;
+            top: -20px;
+            width: 15px;
+            height: 15px;
+            background: var(--accent-green);
+            border-radius: 0 100%;
+            opacity: 0.5;
+            animation: fall linear infinite;
+            pointer-events: none;
+        }
+
+        @keyframes fall {
+            0% { transform: translateY(0) rotate(0deg); left: var(--start-x); }
+            100% { transform: translateY(110vh) rotate(720deg); left: var(--end-x); }
+        }
+
+        .leaf:nth-child(1) { --start-x: 25%; --end-x: 30%; animation-duration: 7s; }
+        .leaf:nth-child(2) { --start-x: 55%; --end-x: 50%; animation-duration: 10s; animation-delay: 2s; }
+        .leaf:nth-child(3) { --start-x: 75%; --end-x: 80%; animation-duration: 13s; animation-delay: 4s; }
+
+        h2 { color: var(--tree-green); margin-top: 0; font-size: 1.5rem; }
+        h3 { color: var(--accent-green); font-size: 1.1rem; margin-top: 20px; }
+        p, li { line-height: 1.6; color: #333; }
+    </style>
+</head>
+<body>
+
+<header>
+    <nav>
+        <a href="index.html" class="nav-link">Landing</a>
+        <a href="portfolio.html" class="nav-link">Portfolio</a>
+        <a href="qualifications.html" class="nav-link">Qualification</a>
+        <a href="service.html" class="nav-link">Service</a>
+        <a href="https://www.linkedin.com/in/grant-duong-dfw" class="nav-link">LinkedIn</a>
+    </nav>
+</header>
+
+<div class="leaf"></div><div class="leaf"></div><div class="leaf"></div>
+
+<div class="main-container">
+    <aside class="side-column">
+        <h2>Web Architecture & Design</h2>
+        <p>Creating a modern web presence requires a multi-layered approach to design and engineering.</p>
+        
+        <h3>1. The Document Object Model (DOM)</h3>
+        <p>The DOM is a programming interface for web documents. It represents the page so that programs can change the document structure, style, and content.</p>
+        
+        
+        <h3>2. Responsive Design Systems</h3>
+        <p>Using <strong>Fluid Grids</strong> and <strong>Media Queries</strong>, we ensure that a single codebase serves users on smartwatches, mobile phones, tablets, and 4K monitors.</p>
+        
+        <h3>3. Progressive Web Apps (PWAs)</h3>
+        <p>Modern sites can now function offline, send push notifications, and be installed on a home screen, bridging the gap between web and native applications.</p>
+        
+        <h3>4. Web Performance Optimization</h3>
+        <ul>
+            <li><strong>Lazy Loading:</strong> Deferring non-critical resource loading.</li>
+            <li><strong>Minification:</strong> Reducing the size of CSS and JS files.</li>
+            <li><strong>CDN Integration:</strong> Serving content from locations physically closer to the user.</li>
+        </ul>
+    </aside>
+
+    <main class="art-center">
+        <div class="prompt-history-box">
+            <h4>Word-for-Word Log</h4>
+            <div class="prompt-item">
+                <span class="prompt-label">Prompt 1:</span>
+                "can you create an html page that has a tree in the middle of it and a textbox on the left that has a description of what you can do for webpages and a box on the right side explaining some cybersecurity ideas."
+            </div>
+            <div class="prompt-item">
+                <span class="prompt-label">Prompt 2:</span>
+                "can you add a header to the top that has 6 bars for placeholders that I can put links to other pages. Also make the tree bigger and more realistic"
+            </div>
+            <div class="prompt-item">
+                <span class="prompt-label">Prompt 3:</span>
+                "Can you make the tree even larger and have someone underneath the tree reading a book and a ladder on the left side going up the tree. Also add in some leaves falling from the tree from time to time"
+            </div>
+            <div class="prompt-item">
+                <span class="prompt-label">Prompt 4:</span>
+                "Can I have the html code for this"
+            </div>
+            <div class="prompt-item">
+                <span class="prompt-label">Prompt 5:</span>
+                "Can you expand the web design and cybersecurity information boxed to be almost from top to bottom and fill it with information"
+            </div>
+            <div class="prompt-item">
+                <span class="prompt-label">Prompt 6:</span>
+                "Can you add a scroll bar so I can see the rest of the page? The bottom half is cut off"
+            </div>
+            <div class="prompt-item">
+                <span class="prompt-label">Prompt 7:</span>
+                "Can you add a text box in the tree recounting all the prompts I've given you to create this html page"
+            </div>
+            <div class="prompt-item">
+                <span class="prompt-label">Prompt 8:</span>
+                "Can you make the build log a word for word recounting of the prompts instead of a summary. Also expand on cybersecurity and web design boxes please"
+            </div>
+        </div>
+
+        <svg viewBox="0 0 400 700" xmlns="http://www.w3.org/2000/svg">
+            <ellipse cx="200" cy="650" rx="190" ry="25" fill="#92ba92" />
+            
+            <g transform="translate(80, 350)">
+                <rect x="0" y="0" width="6" height="300" fill="#5d4037" />
+                <rect x="34" y="0" width="6" height="300" fill="#5d4037" />
+                <rect x="0" y="40" width="40" height="6" fill="#5d4037" />
+                <rect x="0" y="90" width="40" height="6" fill="#5d4037" />
+                <rect x="0" y="140" width="40" height="6" fill="#5d4037" />
+                <rect x="0" y="190" width="40" height="6" fill="#5d4037" />
+                <rect x="0" y="240" width="40" height="6" fill="#5d4037" />
+                <rect x="0" y="290" width="40" height="6" fill="#5d4037" />
+            </g>
+
+            <path d="M180,650 Q200,600 200,380 L215,380 Q215,600 235,650 Z" fill="#3e2723" />
+            
+            <g transform="translate(240, 610)">
+                <circle cx="12" cy="0" r="10" fill="#ffdbac" />
+                <path d="M0,12 Q15,12 25,50 L-10,50 Z" fill="#1b4332" />
+                <rect x="15" y="30" width="25" height="15" fill="#fff" stroke="#ccc" transform="rotate(-15)" />
+            </g>
+
+            <g fill="#1b4332" opacity="0.95">
+                <circle cx="200" cy="220" r="130" />
+                <circle cx="90" cy="280" r="100" />
+                <circle cx="310" cy="280" r="100" />
+                <circle cx="200" cy="110" r="95" />
+                <circle cx="130" cy="150" r="80" />
+                <circle cx="270" cy="150" r="80" />
+            </g>
+        </svg>
+    </main>
+
+    <aside class="side-column">
+        <h2>Cybersecurity Defense</h2>
+        <p>In an era of increasing digital threats, a proactive security posture is non-negotiable.</p>
+
+        <h3>1. The CIA Triad</h3>
+        <p>Security is built on three pillars: <strong>Confidentiality</strong> (keeping data private), <strong>Integrity</strong> (ensuring data is accurate), and <strong>Availability</strong> (ensuring systems are accessible).</p>
+        
+
+        <h3>2. Advanced Threat Mitigation</h3>
+        <p>Beyond basic firewalls, we utilize <strong>Intrusion Detection Systems (IDS)</strong> and <strong>Behavioral Analysis</strong> to identify zero-day exploits before they can be leveraged.</p>
+        
+        <h3>3. Identity & Access Management (IAM)</h3>
+        <p>We implement <strong>RBAC (Role-Based Access Control)</strong> to ensure that employees and users only have access to the specific data required for their roles.</p>
+        
+        <h3>4. Incident Response</h3>
+        <ul>
+            <li><strong>Preparation:</strong> Regular system backups and "war games."</li>
+            <li><strong>Detection:</strong> Real-time logging and alerting systems.</li>
+            <li><strong>Remediation:</strong> Isolating affected systems to prevent lateral movement.</li>
+        </ul>
+    </aside>
+</div>
+
+</body>
+</html>

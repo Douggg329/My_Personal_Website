@@ -1,0 +1,68 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Grant Duong</title>
+        <link rel="stylesheet" type="text/css" href="style.css" id="theme-link">
+
+        <script>
+            const themeLink = document.getElementById('theme-link');
+            const savedTheme = localStorage.getItem('theme');
+            if (savedTheme) {
+                themeLink.setAttribute('href', savedTheme);
+            }
+        
+            function switchTheme() {
+                let currentSheet = themeLink.getAttribute('href');
+                let nextSheet = (currentSheet === 'style.css') ? 'style2.css' : 'style.css';
+                
+                themeLink.setAttribute('href', nextSheet);
+                localStorage.setItem('theme', nextSheet);
+            }
+        </script>
+    </head>
+<body>
+    <div class = "topnav">
+        <a href = "index.html">Home</a>
+        <a href="portfolio.html">Portfolio</a>
+        <a href="qualifications.html">Qualifications</a>
+        <a class="active" href="service.html">Service</a>
+        <a href="genai.html">AI Page</a>
+        <a href="https://www.linkedin.com/in/grant-duong-dfw">LinkedIn</a>
+        <a href="https://github.com/Douggg329?tab=repositories">GitHub</a>
+        <a button onclick="switchTheme()">Change Style</a>
+        <a href = "https://www.tamu.edu/" class="clickable-image-link">
+            <img class = "Tamu" src = "Images/TAM-Stacked-Maroon.jpg">
+        </a>
+    </div>
+    <div class="body">
+        <img class="corkboard" src="Images/Cork-board.png">
+        <img class="pin1" src="Images/redpin.png" height="50px" width="50px">
+        <a href = "https://bigevent.tamu.edu/" class="clickable-image-link bigevent">
+            <img class="onboard" src ="Images/Bigevent.png" height="200px" width="200px">
+        </a>
+        
+
+        <img class="pin2" src="Images/redpin.png" height="50px" width="50px">
+        <a href = "https://www.nrhtx.com/89/Animal-Services" class="clickable-image-link nrh">
+            <img class="onboard" src="Images/NRHAARC.jpg" height="200px" width="400px">
+        </a>
+
+        <img class="pin3" src="Images/redpin.png" height="50px" width="50px">
+        <a href = "https://www.salvationarmyusa.org/" class="clickable-image-link army">
+            <img class="onboard" src="Images/Salvation-Army-logo.jpg" height="200px" width="400px">
+        </a>
+        
+        <div class="sticky note5">
+            <h3>The Big Event</h3>
+            <p>The Big Event is a nonprofit Aggie run organization that gives back to the community of Bryan/College Station every year. They are the largest service event hosted at Texas A&M and I have been a part of it for 3 years now. I have done everything from mulching and weeding, to replacing a porch.</p>
+        </div>
+        <div class="sticky note6">
+            <h3>NRH Animal Rescue Center</h3>
+            <p>The NRH Animal Rescue Center is a shelter for animals that have been rescued within the North Richlands Hills area. I volunteered there in prior years and have tried to help out whenever I go back home.</p>
+        </div>
+        <div class="sticky note7">
+            <h3>Salvation Army</h3>
+            <p>I have volunteered for The Salvation Army a few times throughout my college career. I had done it with my student organization AFC throughout the two years I was a part of the organization. I plan to help out more with them in the future along with many other organizations.</p>
+        </div>
+    </div>
+</html>
